@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Biodata</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Edit Biodata</h2>
+    <form method="POST" action="/edit/<%= person._id %>">
+      <input name="name" value="<%= person.name %>" required>
+      <input name="age" type="number" value="<%= person.age %>" required>
+      <textarea name="bio"><%= person.bio %></textarea>
+      <button type="submit">Update</button>
+    </form>
+  </div>
+</body>
+</html>
